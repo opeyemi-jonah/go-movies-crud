@@ -62,7 +62,6 @@ func createMovie(w http.ResponseWriter, r *http.Request) {
 	movie.ID = strconv.Itoa(rand.Intn(10000000))
 	movies = append(movies, movie)
 	json.NewEncoder(w).Encode(movie)
-	return
 }
 func updateMovie(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
